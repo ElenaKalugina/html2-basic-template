@@ -1,0 +1,24 @@
+.user-login,
+.user-basket {
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $base-black;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.user-login {
+  mask-image: url("/images/icons/stack.svg#user");
+}
+
+.user-basket {
+  mask-image: url("/images/icons/stack.svg#basket");
+}
+
+.user-login__text,
+.user-basket__text {
+  display: none;
+}
+

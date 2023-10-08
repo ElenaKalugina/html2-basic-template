@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font">
     <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font">
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header" data-test="header">
       <div class="header__logo-wrapper">
         <a class="header__logo logo">
           <div class="logo__icon">
@@ -24,9 +25,9 @@
       </div>
       <nav class="header__nav nav" >
        <!-- главное меню -->
-        <ul clss="nav__main-list">
-          <li class="nav__main-item">
-            <a class="nav__main-link" href="#">Главная</a>
+        <ul class="nav__main-list nav__main-list--closed">
+          <li class="nav__main-item nav__main-item--current">
+            <a class="nav__main-link " href="#">Главная</a>
           </li>
           <li class="nav__main-item">
             <a class="nav__main-link" href="#">Каталог</a>
@@ -39,7 +40,7 @@
           </li>
         </ul>
         <!-- пользовательское меню -->
-        <ul clss="nav__user-list">
+        <ul class="nav__user-list">
           <li class="nav__user-item">
             <a class="nav__user-link user-login" href="#">
               <span class="user-login__text">Войти</span>
@@ -52,12 +53,17 @@
           </li>
         </ul>
         <!-- кнопка мобильного меню -->
-        <button class="nav__toggle menu-button" type="button">
+        <button class="nav__button menu-button menu-button--open js-toggle-button" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
       </nav>
     </header>
+    <main>
 
-    <script src="js/script.js" defer></script>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>

@@ -1,7 +1,11 @@
 .header {
+  position: relative;
   display: flex;
   margin: 0 auto;
   width: $mobile-width;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 12px 12px;
 
   @media (min-width: $tablet-width) {
     width: $tablet-width;
@@ -13,5 +17,9 @@
 }
 
 .header__logo-wrapper {
-  padding: 12px 20px;
+  padding: 0 8px;
+}
+
+.header__nav {
+  display: flex;
 }

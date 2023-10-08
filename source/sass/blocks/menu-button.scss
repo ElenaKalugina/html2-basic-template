@@ -1,0 +1,25 @@
+.menu-button {
+  box-sizing: content-box;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  // меню открыто, кнопка "закрыть" - крестик
+  &--close {
+    background-image: url("/images/icons/stack.svg#mobile-menu-close");
+  }
+
+  // меню закрыто, кнопка "открыть" - бургер
+  &--open {
+    background-image: url("/images/icons/stack.svg#mobile-menu-open");
+  }
+}

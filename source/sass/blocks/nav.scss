@@ -1,0 +1,66 @@
+.nav {
+  align-items: center;
+}
+
+//Главное меню
+.nav__main-list {
+  @include list-reset();
+  position: absolute;
+
+  //display: none;
+  // @media (min-width: $tablet-width) {
+  //
+  // }
+
+  //меню открыто
+  &--opened {
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 61px;
+    width: 100vw;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  //меню закрыто
+  &--closed {
+    display: none;
+  }
+}
+
+.nav__main-item {
+  border: 1px $base-secondary solid;
+}
+
+.main-nav__item:first-child {
+  border: 1px $base-secondary solid;
+}
+
+.nav__main-link {
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+
+//Пользовательское меню
+.nav__user-list {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.nav__user-item {
+  padding: 10px 22px;
+}
+
+//Кнопка - бургер
+.nav__button {
+  padding: 10px 22px;
+}
