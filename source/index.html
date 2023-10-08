@@ -5,9 +5,58 @@
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header">
+      <div class="header__logo-wrapper">
+        <a class="header__logo logo">
+          <div class="logo__icon">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+              <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+              <img class="logo__icon-img" src="images/logo-mobile.svg" width="32" height="36"
+                alt="Интернет-магазин кофейных напитков Drink2Go.">
+            </picture>
+          </div>
+        </a>
+      </div>
+      <nav class="header__nav nav" >
+       <!-- главное меню -->
+        <ul clss="nav__main-list">
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">Главная</a>
+          </li>
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">Каталог</a>
+          </li>
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">Доставка</a>
+          </li>
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">О нас</a>
+          </li>
+        </ul>
+        <!-- пользовательское меню -->
+        <ul clss="nav__user-list">
+          <li class="nav__user-item">
+            <a class="nav__user-link user-login" href="#">
+              <span class="user-login__text">Войти</span>
+            </a>
+          </li>
+          <li class="nav__user-item">
+            <a class="nav__user-link user-basket" href="#">
+              <span class="user-basket__text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+        <!-- кнопка мобильного меню -->
+        <button class="nav__toggle menu-button" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+      </nav>
+    </header>
 
     <script src="js/script.js" defer></script>
   </body>

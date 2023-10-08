@@ -1,5 +1,17 @@
 .header {
-  background-color: tomato;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: flex;
+  margin: 0 auto;
+  width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.header__logo-wrapper {
+  padding: 12px 20px;
 }
