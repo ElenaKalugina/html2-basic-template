@@ -6,6 +6,7 @@
 .nav__main-list {
   @include list-reset();
   position: absolute;
+  background-color: $base-white;
 
   //display: none;
   // @media (min-width: $tablet-width) {

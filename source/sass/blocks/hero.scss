@@ -1,0 +1,11 @@
+.hero {
+  background-color: $flat-white;
+}
+
+.hero__list {
+  @include list-reset();
+  width: $mobile-width;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}

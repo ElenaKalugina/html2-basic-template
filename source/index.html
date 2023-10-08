@@ -5,14 +5,14 @@
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font">
-    <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font">
-    <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="header" data-test="header">
       <div class="header__logo-wrapper">
-        <a class="header__logo logo">
+        <a class="header__logo logo" href="#">
           <div class="logo__icon">
             <picture>
               <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
@@ -58,8 +58,75 @@
         </button>
       </nav>
     </header>
-    <main>
+    <main class="main-index ">
+      <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go.</h1>
+      <section class="main-index__hero hero" data-test="hero">
+        <h2 class="visually-hidden">Слайдер с новинками.</h2>
+        <ol class="hero__list">
+          <li class="hero__item hero__item--current">
+            <p class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="images/catalog/slider1-desktop.webp 1x, images/catalog/slider1-desktop@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="images/catalog/slider1-desktop.png 1x, images/catalog/slider1-desktop@2x.png 2x">
 
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/slider1-tablet.webp 1x, images/catalog/slider1-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="images/catalog/slider1-tablet.png 1x, images/catalog/slider1-tablet@2x.png 2x">
+
+                <source type="image/webp" srcset="images/catalog/slider1-mobile.webp 1x, images/catalog/slider1-mobile@2x.webp 2x">
+                <img class="hero__image" src="images/catalog/slider1-mobile.png" srcset="images/catalog/slider1-mobile@2x.png 2x"
+                  width="280" height="280" alt="Белая банка с кофе.">
+              </picture>
+            </p>
+            <div class="hero__description-wrapper description">
+              <p class="description__header header-badge">Новинка!</p>
+              <p class="description__title">Декаф Флэт Уайт</p>
+              <p class="description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
+                что нужно для расслабления после тяжёлого рабочего дня
+              </p>
+            </div>
+            <div class="hero__order-wrapper order-hero">
+              <div class="order-hero__cost-wrapper">
+                <span class="order-hero__old-price">295&#8381;</span>
+                <span class="order-hero__price">225&#8381;</span>
+              </div>
+              <button class="order-hero__button button button--accept" type="button">
+                Заказать
+              </button>
+            </div>
+          </li>
+        </ol>
+        <ul class="hero__button-list">
+          <li class="hero__button-item">
+            <button class="slider-button slider-button--prev" type="button">
+              <span class="visually-hidden">Предыдущий товар.</span>
+            </button>
+          </li>
+          <li class="hero__button-item">
+            <button class="slider-button slider-button--next" type="button">
+              <span class="visually-hidden">Следующий товар.</span>
+            </button>
+          </li>
+        </ul>
+        <ol class="hero__pagination-list">
+          <li class="hero__pagination-item">
+            <button class="slider-pagination-button slider-pagination-button--current" type="button">
+              <span class="visually-hidden">1 товар.</span>
+            </button>
+          </li>
+          <li class="hero__pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">2 товар.</span>
+            </button>
+          </li>
+          <li class="hero__pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">3 товар.</span>
+            </button>
+          </li>
+        </ol>
+      </section>
     </main>
     <footer>
 
