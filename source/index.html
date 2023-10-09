@@ -1,99 +1,182 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Интернет-магазин кофейных напитков Drink2Go</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
-  </head>
-  <body class="page__body">
-    <header class="header" data-test="header">
-      <div class="header__logo-wrapper">
-        <a class="header__logo logo" href="#">
-          <div class="logo__icon">
-            <picture>
-              <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
-              <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
-              <img class="logo__icon-img" src="images/logo-mobile.svg" width="32" height="36"
-                alt="Интернет-магазин кофейных напитков Drink2Go.">
-            </picture>
-          </div>
-        </a>
-      </div>
-      <nav class="header__nav nav" >
-       <!-- главное меню -->
-        <ul class="nav__main-list nav__main-list--closed">
-          <li class="nav__main-item nav__main-item--current">
-            <a class="nav__main-link " href="#">Главная</a>
-          </li>
-          <li class="nav__main-item">
-            <a class="nav__main-link" href="#">Каталог</a>
-          </li>
-          <li class="nav__main-item">
-            <a class="nav__main-link" href="#">Доставка</a>
-          </li>
-          <li class="nav__main-item">
-            <a class="nav__main-link" href="#">О нас</a>
-          </li>
-        </ul>
-        <!-- пользовательское меню -->
-        <ul class="nav__user-list">
-          <li class="nav__user-item">
-            <a class="nav__user-link user-login" href="#">
-              <span class="user-login__text">Войти</span>
-            </a>
-          </li>
-          <li class="nav__user-item">
-            <a class="nav__user-link user-basket" href="#">
-              <span class="user-basket__text">Корзина</span>
-            </a>
-          </li>
-        </ul>
-        <!-- кнопка мобильного меню -->
-        <button class="nav__button menu-button menu-button--open js-toggle-button" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-      </nav>
-    </header>
-    <main class="main-index ">
-      <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go.</h1>
-      <section class="main-index__hero hero" data-test="hero">
-        <h2 class="visually-hidden">Слайдер с новинками.</h2>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин кофейных напитков Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+</head>
+
+<body class="page__body">
+  <header class="header" data-test="header">
+    <div class="header__logo-wrapper">
+      <a class="header__logo logo" href="#">
+        <div class="logo__icon">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+            <img class="logo__icon-img" src="images/logo-mobile.svg" width="32" height="36"
+              alt="Интернет-магазин кофейных напитков Drink2Go.">
+          </picture>
+        </div>
+      </a>
+    </div>
+    <nav class="header__nav nav">
+      <!-- главное меню -->
+      <ul class="nav__main-list nav__main-list--closed">
+        <li class="nav__main-item nav__main-item--current">
+          <a class="nav__main-link " href="#">Главная</a>
+        </li>
+        <li class="nav__main-item">
+          <a class="nav__main-link" href="#">Каталог</a>
+        </li>
+        <li class="nav__main-item">
+          <a class="nav__main-link" href="#">Доставка</a>
+        </li>
+        <li class="nav__main-item">
+          <a class="nav__main-link" href="#">О нас</a>
+        </li>
+      </ul>
+      <!-- пользовательское меню -->
+      <ul class="nav__user-list">
+        <li class="nav__user-item">
+          <a class="nav__user-link user-login" href="#">
+            <span class="user-login__text">Войти</span>
+          </a>
+        </li>
+        <li class="nav__user-item">
+          <a class="nav__user-link user-basket" href="#">
+            <span class="user-basket__text">Корзина</span>
+          </a>
+        </li>
+      </ul>
+      <!-- кнопка мобильного меню -->
+      <button class="nav__button menu-button menu-button--open js-toggle-button" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+    </nav>
+  </header>
+  <main class="main-index ">
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go.</h1>
+    <section class="main-index__hero hero" data-test="hero">
+      <h2 class="visually-hidden">Слайдер с новинками.</h2>
+      <div class="hero__wrapper">
         <ol class="hero__list">
-          <li class="hero__item hero__item--current">
+          <li class="hero__item hero__item--first">
+            <div class="hero__item-wrapper">
             <p class="hero__image-wrapper">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="images/catalog/slider1-desktop.webp 1x, images/catalog/slider1-desktop@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="images/catalog/slider1-desktop.png 1x, images/catalog/slider1-desktop@2x.png 2x">
+                  srcset="images/catalog/slider-desktop1.webp 1x, images/catalog/slider-desktop1@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="images/catalog/slider-desktop1.png 1x, images/catalog/slider-desktop1@2x.png 2x">
 
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="images/catalog/slider1-tablet.webp 1x, images/catalog/slider1-tablet@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="images/catalog/slider1-tablet.png 1x, images/catalog/slider1-tablet@2x.png 2x">
+                  srcset="images/catalog/slider-tablet1.webp 1x, images/catalog/slider-tablet1@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="images/catalog/slider-tablet1.png 1x, images/catalog/slider-tablet1@2x.png 2x">
 
-                <source type="image/webp" srcset="images/catalog/slider1-mobile.webp 1x, images/catalog/slider1-mobile@2x.webp 2x">
-                <img class="hero__image" src="images/catalog/slider1-mobile.png" srcset="images/catalog/slider1-mobile@2x.png 2x"
-                  width="280" height="280" alt="Белая банка с кофе.">
+                <source type="image/webp"
+                  srcset="images/catalog/slider-mobile1.webp 1x, images/catalog/slider-mobile1@2x.webp 2x">
+                <img class="hero__image" src="images/catalog/slider-mobile1.png"
+                  srcset="images/catalog/slider-mobile1@2x.png 2x" width="280" height="280" alt="Белая банка с кофе.">
               </picture>
             </p>
             <div class="hero__description-wrapper description">
               <p class="description__header header-badge">Новинка!</p>
               <p class="description__title">Декаф Флэт Уайт</p>
-              <p class="description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
+              <p class="description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком —
+                то,
                 что нужно для расслабления после тяжёлого рабочего дня
               </p>
             </div>
             <div class="hero__order-wrapper order-hero">
               <div class="order-hero__cost-wrapper">
                 <span class="order-hero__old-price">295&#8381;</span>
-                <span class="order-hero__price">225&#8381;</span>
+                <span class="order-hero__price price">225&#8381;</span>
               </div>
-              <button class="order-hero__button button button--accept" type="button">
+              <button class="order-hero__button button" type="button">
                 Заказать
               </button>
+            </div>
+          </div>
+          </li>
+          <li class="hero__item hero__item--second visually-hidden">
+            <div class="hero__item-wrapper">
+            <p class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="images/catalog/slider-desktop2.webp 1x, images/catalog/slider-desktop2@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="images/catalog/slider-desktop2.png 1x, images/catalog/slider-desktop2@2x.png 2x">
+
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/slider-tablet2.webp 1x, images/catalog/slider-tablet2@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="images/catalog/slider-tablet2.png 1x, images/catalog/slider-tablet2@2x.png 2x">
+
+                <source type="image/webp"
+                  srcset="images/catalog/slider-mobile2.webp 1x, images/catalog/slider-mobile2@2x.webp 2x">
+                <img class="hero__image" src="images/catalog/slider-mobile2.png"
+                  srcset="images/catalog/slider-mobile2@2x.png 2x" width="280" height="280" alt="Сиреневая банка с кофе.">
+              </picture>
+            </p>
+            <div class="hero__description-wrapper description">
+              <p class="description__header header-badge">Новинка!</p>
+              <p class="description__title">Лавандовый Латте</p>
+              <p class="description__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+              </p>
+            </div>
+            <div class="hero__order-wrapper order-hero">
+              <div class="order-hero__cost-wrapper">
+                <span class="order-hero__old-price">285&#8381;</span>
+                <span class="order-hero__price price">265&#8381;</span>
+              </div>
+              <button class="order-hero__button button" type="button">
+                Заказать
+              </button>
+            </div>
+            </div>
+          </li>
+          <li class="hero__item hero__item--third visually-hidden">
+            <div class="hero__item-wrapper">
+            <p class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="images/catalog/slider-desktop3.webp 1x, images/catalog/slider-desktop3@2x.webp 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="images/catalog/slider-desktop3.png 1x, images/catalog/slider-desktop3@2x.png 2x">
+
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="images/catalog/slider-tablet3.webp 1x, images/catalog/slider-tablet3@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="images/catalog/slider-tablet3.png 1x, images/catalog/slider-tablet3@2x.png 2x">
+
+                <source type="image/webp"
+                  srcset="images/catalog/slider-mobile3.webp 1x, images/catalog/slider-mobile3@2x.webp 2x">
+                <img class="hero__image" src="images/catalog/slider-mobile3.png"
+                  srcset="images/catalog/slider-mobile3@2x.png 2x" width="280" height="280" alt="Черная банка с кофе.">
+              </picture>
+            </p>
+            <div class="hero__description-wrapper description">
+              <p class="description__header header-badge">Новинка!</p>
+              <p class="description__title">Тройной Эспрессо</p>
+              <p class="description__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+            </div>
+            <div class="hero__order-wrapper order-hero">
+              <div class="order-hero__cost-wrapper">
+                <span class="order-hero__old-price">395&#8381;</span>
+                <span class="order-hero__price price">375&#8381;</span>
+              </div>
+              <button class="order-hero__button button" type="button">
+                Заказать
+              </button>
+            </div>
             </div>
           </li>
         </ol>
@@ -126,11 +209,13 @@
             </button>
           </li>
         </ol>
-      </section>
-    </main>
-    <footer>
+      </div>
+    </section>
+  </main>
+  <footer>
 
-    </footer>
-    <script src="js/script.js" type="module"></script>
-  </body>
+  </footer>
+  <script src="js/script.js" type="module"></script>
+</body>
+
 </html>

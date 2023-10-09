@@ -47,7 +47,15 @@
   font-weight: 500;
   line-height: 16px;
 }
+// .main-nav__item a[href] {
+//   &:hover {
+//     opacity: 0.6;
+//   }
 
+//   &:active {
+//     opacity: 0.3;
+//   }
+// }
 
 //Пользовательское меню
 .nav__user-list {
@@ -58,10 +66,18 @@
 }
 
 .nav__user-item {
-  padding: 10px 22px;
+  padding: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
 //Кнопка - бургер
 .nav__button {
-  padding: 10px 22px;
+  padding: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
