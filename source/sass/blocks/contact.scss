@@ -1,0 +1,54 @@
+.contact {
+  padding-top: 20px;
+  padding-bottom: 28px;
+}
+
+.contact__heading {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.contact__adress {
+  position: relative;
+  margin: 0;
+  margin-bottom: 16px;
+  font-style: normal;
+  padding-left: 19px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/images/icons/stack.svg#icon-adress");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 16px;
+    width: 13px;
+    height: 16px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.contact__phone {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  font-style: normal;
+  color: $base-black;
+  padding-left: 19px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/images/icons/stack.svg#icon-phone");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 16px;
+    width: 13px;
+    height: 16px;
+    top: 0;
+    left: 0;
+  }
+}

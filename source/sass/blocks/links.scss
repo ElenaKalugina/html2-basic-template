@@ -1,0 +1,19 @@
+.links {
+  padding-top: 20px;
+  padding-bottom: 28px;
+}
+
+.links__list {
+  @include list-reset();
+  width: $mobile-container-width;
+  margin: 0 auto;
+}
+
+.links__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.links__heading {
+  margin: 0;
+  margin-bottom: 20px;
+}

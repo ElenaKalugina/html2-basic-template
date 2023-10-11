@@ -1,0 +1,11 @@
+.social__list {
+  @include list-reset();
+  min-width: 40px;
+  max-width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
