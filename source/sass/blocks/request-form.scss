@@ -1,13 +1,15 @@
 .request-form__wrapper {
   width: $mobile-container-width;
   margin: 0 auto;
-  border: 1px #000000 solid;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
+  padding-bottom: 44px;
 }
 
-.request-form__price {
+.request-form__country,
+.request-form__price,
+.request-form__milk {
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,4 +19,17 @@
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+}
+
+.request-form__country-title,
+.request-form__milk-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.request-form__buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
 }

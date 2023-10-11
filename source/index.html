@@ -100,9 +100,7 @@
                   <span class="order-hero__old-price">295&#8381;</span>
                   <span class="order-hero__price price">225&#8381;</span>
                 </div>
-                <button class="order-hero__button button" type="button">
-                  Заказать
-                </button>
+                <button class="order-hero__button button" type="button">Заказать</button>
               </div>
             </div>
           </li>
@@ -249,42 +247,135 @@
           <h2 class="catalog__badge badge">Каталог</h2>
           <p class="catalog__title heading2">Каталог кофейных напитков</p>
         </div>
-        <form class="request-form" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="request-form__wrapper">
-            <fieldset class="request-form__price">
-              <legend class="request-form__price-title heading-filter">Цена</legend>
-              <div class="request-form__range range">
+        <div class="catalog__wrapper-form-and-products">
+          <form class="request-form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="request-form__wrapper">
+              <!-- range Цена-->
+              <fieldset class="request-form__price">
+                <legend class="request-form__price-title heading-filter">Цена</legend>
+                <div class="request-form__range range">
 
-                <div class="range__scale">
-                  <div class="range__bar" style="left: 0; width: 241px;">
-                    <button class="range__toggle range__toggle--min" type="button">
-                      <span class="visually-hidden">Изменить минимальную цену.</span>
-                    </button>
-                    <button class="range__toggle range__toggle--max" type="button">
-                      <span class="visually-hidden">Изменить максимальную цену.</span>
-                    </button>
+                  <div class="range__scale">
+                    <div class="range__bar" style="left: 0; width: 241px;">
+                      <button class="range__toggle range__toggle--min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range__toggle range__toggle--max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="range__inputs">
+                    <div class="range__inputs-min-container">
+                      <label class="range__label" for="price-min"></label>
+                      <input class="range__input range__input--min" type="number" id="price-min" name="price-min"
+                        placeholder="0">
+                    </div>
+
+                    <div class="range__inputs-max-container">
+                      <label class="range__label" for="price-max"></label>
+                      <input class="range__input range__input--max" type="number" id="price-max" name="price-max"
+                        placeholder="0" value="900">
+                    </div>
                   </div>
                 </div>
+              </fieldset>
+              <!-- Наличие молока -->
+              <fieldset class="request-form__milk milk">
+                <legend class="request-form__milk-title heading-filter">Наличие молока</legend>
 
-                <div class="range__inputs">
-                  <div class="range__inputs-min-container">
-                    <label class="range__label" for="price-min"></label>
-                    <input class="range__input range__input--min" type="number" id="price-min" name="price-min"
-                      placeholder="0">
-                  </div>
-
-                  <div class="range__inputs-max-container">
-                    <label class="range__label" for="price-max"></label>
-                    <input class="range__input range__input--max" type="number" id="price-max" name="price-max"
-                      placeholder="0" value="900">
-                  </div>
-                </div>
+                <ul class="milk__list">
+                  <li class="milk__item">
+                    <label class="milk__label">
+                      <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="not-important"
+                        checked>
+                      <span class="milk__mark"></span>
+                      <span class="milk__text">Не важно</span>
+                    </label>
+                  </li>
+                  <li class="milk__item">
+                    <label class="milk__label">
+                      <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="animal-milk">
+                      <span class="milk__mark"></span>
+                      <span class="milk__text">Животное молоко</span>
+                    </label>
+                  </li>
+                  <li class="milk__item">
+                    <label class="milk__label">
+                      <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="veg-milk">
+                      <span class="milk__mark"></span>
+                      <span class="milk__text">Растительное молоко</span>
+                    </label>
+                  </li>
+                  <li class="milk__item">
+                    <label class="milk__label">
+                      <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="without-milk" disabled>
+                      <span class="milk__mark"></span>
+                      <span class="milk__text">Без молока</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <!-- Страна произрастания -->
+              <fieldset class="request-form__country country">
+                <legend class="request-form__country-title heading-filter">Страна произрастания</legend>
+                <ul class="country__list">
+                  <li class="country__item">
+                    <label class="country__label">
+                      <input class="country__input visually-hidden" type="checkbox" name="brazil" checked>
+                      <span class="country__mark"></span>
+                      <span class="country__text">Бразилия</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__label">
+                      <input class="country__input visually-hidden" type="checkbox" name="ethiopia">
+                      <span class="country__mark"></span>
+                      <span class="country__text">Эфиопия</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__label">
+                      <input class="country__input visually-hidden" type="checkbox" name="colombia">
+                      <span class="country__mark"></span>
+                      <span class="country__text">Колумбия</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__label">
+                      <input class="country__input visually-hidden" type="checkbox" name="costa-rica">
+                      <span class="country__mark"></span>
+                      <span class="country__text">Коста-Рика</span>
+                    </label>
+                  </li>
+                  <li class="country__item">
+                    <label class="country__label">
+                      <input class="country__input visually-hidden" type="checkbox" name="peru" disabled>
+                      <span class="country__mark"></span>
+                      <span class="country__text">Перу</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="request-form__buttons">
+                <button class="button" type="submit">Применить</button>
+                <button class="button button--reset" type="reset">Сбросить</button>
               </div>
-
-            </fieldset>
+            </div>
+          </form>
+          <div class="catalog__wrapper-sort sort">
+            <span class="sort__title heading-filter"> Сортировка:</span>
+            <select class="sort__control">
+              <option value="default">по умолчанию</option>
+              <option value="new">новинки</option>
+              <option value="popular">популярное</option>
+            </select>
+          </div>
+          <div class="catalog__wrapper-products products">
 
           </div>
-        </form>
+        </div>
       </div>
     </section>
     <section class="main-index__location location" data-test="map">

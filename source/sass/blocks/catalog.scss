@@ -7,7 +7,6 @@
 .catalog__wrapper {
   width: $mobile-width;
   margin: 0 auto;
-  border: 1px #000000 solid;
 }
 
 .catalog__wrapper-heading {
@@ -23,4 +22,16 @@
 
 .catalog__title {
   margin: 0;
+}
+
+.catalog__wrapper-form-and-products {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.catalog__wrapper-sort {
+  display: flex;
+  align-items: center;
+  width: $mobile-container-width;
+  margin-bottom: 16px;
 }

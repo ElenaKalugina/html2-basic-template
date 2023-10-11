@@ -1,0 +1,79 @@
+.milk__list {
+  @include list-reset();
+}
+
+.milk__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.milk__label {
+  display: flex;
+
+  &:has(.milk__input:disabled) .milk__text {
+    color: $light-grey;
+  }
+}
+
+.milk__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.milk__mark {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  height: 24px;
+  width: 24px;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: 2px $base-grey solid;
+}
+
+.milk__input {
+  &:focus + .milk__mark,
+  &:hover + .milk__mark {
+    border: 2px $primary-lighter solid;
+    outline: none;
+  }
+
+  &:hover + .milk__mark::before,
+  &:focus + .milk__mark::before {
+    position: absolute;
+    content: "";
+    background-color: $primary-opacity025;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:checked + .milk__mark {
+    border: 2px $base-primary solid;
+    outline: none;
+  }
+
+  &:checked + .milk__mark::before {
+    position: absolute;
+    content: "";
+    background-color: $base-primary;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:disabled + .milk__mark {
+    border: 2px $light-grey solid;
+    background-color: $lightest-grey;
+  }
+
+  &:disabled + .milk__mark::before {
+    background-color: $light-grey;
+  }
+}
