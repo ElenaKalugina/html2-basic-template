@@ -1,0 +1,131 @@
+.range__scale {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  background-color: $light-grey;
+  margin-bottom: 36px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  background-color: $primary-lighter;
+  left: 0;
+
+  &:has(.range__toggle:disabled) {
+    background-color: $base-grey;
+  }
+}
+
+
+.range__toggle {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: 2px $primary-lighter solid;
+
+  &--min {
+    top: -11px;
+    left: 0;
+  }
+
+  &--max {
+    top: -11px;
+    left: 229px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    position: absolute;
+    content: "";
+    background-color: $primary-opacity025;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:active::before {
+    position: absolute;
+    content: "";
+    background-color: $base-primary;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:disabled {
+    border: 2px $base-grey solid;
+  }
+}
+
+.range__inputs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 44px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("/images/icons/stack.svg#stroke");
+    background-size: 8px 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.range__input {
+  width: 118px;
+  box-sizing: border-box;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: 2px $primary-lighter solid;
+  border-radius: 4px;
+  padding: 6px 10px;
+  text-align: center;
+
+  &:placeholder-shown {
+    color: $base-grey;
+  }
+
+  &:focus {
+    border: 2px $primary-darker solid;
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px $light-grey solid;
+    background-color: $lightest-grey;
+    color: $base-grey;
+  }
+}
+
+.range__input[type="number"] {
+  -moz-appearance:textfield;
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}

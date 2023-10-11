@@ -218,8 +218,10 @@
     </section>
     <section class="main-index__features features" data-test="features">
       <div class="features__wrapper">
-        <p class="features__badge badge">Преимущества</p>
-        <h2 class="features__title heading2">Главные причины выбрать Drink2Go</h2>
+        <div class="features__wrapper-heading">
+          <h2 class="features__badge badge">Преимущества</h2>
+          <p class="features__title heading2">Главные причины выбрать Drink2Go</p>
+        </div>
         <ul class="features__list">
           <li class="features__item features__item--speed">
             <h3 class="features__heading heading3">Скорость</h3>
@@ -241,6 +243,50 @@
         </ul>
       </div>
     </section>
+    <section class="main-index__catalog catalog" data-test="catalog">
+      <div class="catalog__wrapper">
+        <div class="catalog__wrapper-heading">
+          <h2 class="catalog__badge badge">Каталог</h2>
+          <p class="catalog__title heading2">Каталог кофейных напитков</p>
+        </div>
+        <form class="request-form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="request-form__wrapper">
+            <fieldset class="request-form__price">
+              <legend class="request-form__price-title heading-filter">Цена</legend>
+              <div class="request-form__range range">
+
+                <div class="range__scale">
+                  <div class="range__bar" style="left: 0; width: 241px;">
+                    <button class="range__toggle range__toggle--min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range__toggle range__toggle--max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="range__inputs">
+                  <div class="range__inputs-min-container">
+                    <label class="range__label" for="price-min"></label>
+                    <input class="range__input range__input--min" type="number" id="price-min" name="price-min"
+                      placeholder="0">
+                  </div>
+
+                  <div class="range__inputs-max-container">
+                    <label class="range__label" for="price-max"></label>
+                    <input class="range__input range__input--max" type="number" id="price-max" name="price-max"
+                      placeholder="0" value="900">
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+
+          </div>
+        </form>
+      </div>
+    </section>
     <section class="main-index__location location" data-test="map">
       <h2 class="visually-hidden">Карта с адресом.</h2>
       <span class="location__img"></span>
@@ -249,39 +295,39 @@
   <footer class="footer" data-test="footer">
     <div class="footer__wrapper">
       <div class="footer__logo-social">
-          <div class="footer__logo-wrapper">
-            <a class="footer__logo logo" href="#">
-              <div class="logo__icon">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
-                  <img class="logo__icon-img" src="images/logo-tablet.svg" width="82" height="36"
-                    alt="Интернет-магазин кофейных напитков Drink2Go.">
-                </picture>
-              </div>
-            </a>
-          </div>
-          <section class="footer__social social">
-            <h2 class="visually-hidden">Ссылки на социальные сети.</h2>
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="button-social button-social--vkontakte" href="#">
-                  <span class="visually-hidden">Ссылка на Vkontakte.</span>
-                </a>
-              </li>
+        <div class="footer__logo-wrapper">
+          <a class="footer__logo logo" href="#">
+            <div class="logo__icon">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+                <img class="logo__icon-img" src="images/logo-tablet.svg" width="82" height="36"
+                  alt="Интернет-магазин кофейных напитков Drink2Go.">
+              </picture>
+            </div>
+          </a>
+        </div>
+        <section class="footer__social social">
+          <h2 class="visually-hidden">Ссылки на социальные сети.</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="button-social button-social--vkontakte" href="#">
+                <span class="visually-hidden">Ссылка на Vkontakte.</span>
+              </a>
+            </li>
 
-              <li class="social__item">
-                <a class="button-social button-social--pin" href="#">
-                  <span class="visually-hidden">Ссылка на Pinterest.</span>
-                </a>
-              </li>
+            <li class="social__item">
+              <a class="button-social button-social--pin" href="#">
+                <span class="visually-hidden">Ссылка на Pinterest.</span>
+              </a>
+            </li>
 
-              <li class="social__item ">
-                <a class="button-social button-social--ok" href="#">
-                  <span class="visually-hidden">Ссылка на Telegram.</span>
-                </a>
-              </li>
-            </ul>
-          </section>
+            <li class="social__item ">
+              <a class="button-social button-social--ok" href="#">
+                <span class="visually-hidden">Ссылка на Telegram.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
       <div class="footer__links-wrapper">
         <section class="footer__e-shop links">

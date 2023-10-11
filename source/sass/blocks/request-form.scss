@@ -1,0 +1,20 @@
+.request-form__wrapper {
+  width: $mobile-container-width;
+  margin: 0 auto;
+  border: 1px #000000 solid;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+.request-form__price {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.request-form__price-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
