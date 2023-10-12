@@ -33,5 +33,14 @@
   display: flex;
   align-items: center;
   width: $mobile-container-width;
+  justify-self: center;
   margin-bottom: 16px;
+}
+
+.catalog__wrapper-products {
+  margin-bottom: 40px;
+}
+
+.catalog__wrapper-pagination {
+  justify-self: center;
 }

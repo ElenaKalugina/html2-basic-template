@@ -14,11 +14,11 @@
           appearance: none;
   border: none;
   border-radius: 4px;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 20px 4px 10px;
   background-image: url("/images/icons/stack.svg#select-arrow-down");
   background-size: 10px 6px;
   background-repeat: no-repeat;
-  background-position: right 12px center;
+  background-position: right center;
 
   &:hover,
   &:focus {

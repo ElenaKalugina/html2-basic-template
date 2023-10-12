@@ -73,7 +73,11 @@
     background-color: $lightest-grey;
   }
 
-  &:disabled + .milk__mark::before {
+  &:disabled:hover + .milk__mark::before {
+    background-color: $lightest-grey;
+  }
+
+  &:disabled:checked + .milk__mark::before {
     background-color: $light-grey;
   }
 }
