@@ -1,17 +1,44 @@
 .features {
   padding-top: 50px;
   padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
 }
 
 .features__wrapper {
   width: $mobile-width;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }
 
 .features__wrapper-heading {
   width: $mobile-container-width;
   margin: 0 auto;
   margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-container-width;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-container-width;
+  }
 }
 
 .features__badge {
@@ -29,17 +56,48 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 32px;
+  justify-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-container-width;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-container-width;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+    justify-items: center;
+  }
 }
 
 .features__item {
   position: relative;
   padding-top: 70px;
   text-align: center;
+  box-sizing: border-box;
 
-  &--speed::before {
-    position: absolute;
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 80px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    padding-top: 70px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  &::before {
     content: "";
-    background-image: url("/images/icons/stack.svg#feature-speed");
+    position: absolute;
     background-size: 52px 56px;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,54 +106,78 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      left: 0;
+      transform: translateX(8px);
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--speed::before {
+    background-image: url("/images/icons/stack.svg#feature-speed");
   }
 
   &--fit::before {
-    position: absolute;
-    content: "";
+    // position: absolute;
+    // content: "";
     background-image: url("/images/icons/stack.svg#feature-fit");
-    background-size: 52px 56px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 52px;
-    height: 56px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    // background-size: 52px 56px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // width: 52px;
+    // height: 56px;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
   }
 
   &--energy::before {
-    position: absolute;
-    content: "";
+    // position: absolute;
+    // content: "";
     background-image: url("/images/icons/stack.svg#feature-energy");
-    background-size: 52px 56px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 52px;
-    height: 56px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    // background-size: 52px 56px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // width: 52px;
+    // height: 56px;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
   }
 
   &--eco::before {
-    position: absolute;
-    content: "";
+    // position: absolute;
+    // content: "";
     background-image: url("/images/icons/stack.svg#feature-eco");
-    background-size: 52px 56px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 52px;
-    height: 56px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    // background-size: 52px 56px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // width: 52px;
+    // height: 56px;
+    // top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
   }
 }
 
 .features__heading {
   margin: 0;
   margin-bottom: 4px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
 
 .features__description {

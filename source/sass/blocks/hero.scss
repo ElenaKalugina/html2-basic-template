@@ -10,37 +10,100 @@
   position: relative;
   width: $mobile-width;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }
 
 .hero__item {
   padding-top: 20px;
   padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
 }
 
 .hero__item--first {
   background-color: $flat-white;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, $flat-white 640px, $base-white 640px 828px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $flat-white;
+  }
 }
 
 .hero__item--second {
   background-color: $lavender-latte;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, $lavender-latte 640px, $lavender-latte 640px 828px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $lavender-latte;
+  }
 }
 
 .hero__item--third {
   background-color: $espresso;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, $espresso 640px, $espresso 640px 828px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $espresso;
+  }
 }
 
 .hero__image-wrapper {
   margin-top: 0;
   margin-bottom: 10px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .hero__image {
   vertical-align: bottom;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+  }
 }
 
 .hero__description-wrapper {
   margin: 0 auto;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 1/2;
+  }
+}
+
+.hero__order-wrapper {
+  @media (min-width: $tablet-width) {
+    grid-row: 2/3;
+  }
 }
 
 .hero__button-list {
@@ -52,6 +115,14 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }
 
 .hero__pagination-list {

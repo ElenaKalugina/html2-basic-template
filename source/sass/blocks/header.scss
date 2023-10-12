@@ -15,10 +15,24 @@
   }
 }
 
-.header__logo-wrapper {
-  padding: 12px 12px 12px 20px;
+.header__wrapper {
+  display: flex;
+  width: $mobile-width;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-container-width;
+    margin: 0 auto;
+    justify-content: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-container-width;
+  }
 }
 
-.header__nav {
-  display: flex;
+.header__logo-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-right: 67px;
+  }
 }

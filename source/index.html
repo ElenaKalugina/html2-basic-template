@@ -13,23 +13,25 @@
 
 <body class="page__body">
   <header class="header" data-test="header">
+    <div class="header__wrapper">
     <div class="header__logo-wrapper">
-      <a class="header__logo logo" href="#">
+      <a class="header__logo logo">
         <div class="logo__icon">
           <picture>
-            <source type="svg" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
-            <source type="svg" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+            <source  media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+            <source  media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
             <img class="logo__icon-img" src="images/logo-mobile.svg" width="32" height="36"
               alt="Интернет-магазин кофейных напитков Drink2Go.">
           </picture>
         </div>
+        <span class="logo__name">Интернет-магазин кофейных напитков</span>
       </a>
     </div>
     <nav class="header__nav nav">
       <!-- главное меню -->
       <ul class="nav__main-list nav__main-list--closed">
         <li class="nav__main-item nav__main-item--current">
-          <a class="nav__main-link " href="#">Главная</a>
+          <a class="nav__main-link " >Главная</a>
         </li>
         <li class="nav__main-item">
           <a class="nav__main-link" href="#">Каталог</a>
@@ -59,6 +61,7 @@
         <span class="visually-hidden">Открыть меню.</span>
       </button>
     </nav>
+  </div>
   </header>
   <main class="main-index ">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go.</h1>
@@ -71,17 +74,17 @@
               <p class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop1.webp 1x, images/catalog/slider-desktop1@2x.webp 2x">
-                  <source type="png" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop1.png 1x, images/catalog/slider-desktop1@2x.png 2x">
+                    srcset="images/catalog/slider-desktop1.webp 1x, images/catalog/slider-desktop1@2x.webp 2x" width="600" height="600">
+                  <source media="(min-width: 1440px)"
+                    srcset="images/catalog/slider-desktop1.png 1x, images/catalog/slider-desktop1@2x.png 2x" width="600" height="600">
 
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet1.webp 1x, images/catalog/slider-tablet1@2x.webp 2x">
-                  <source type="png" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet1.png 1x, images/catalog/slider-tablet1@2x.png 2x">
+                    srcset="images/catalog/slider-tablet1.webp 1x, images/catalog/slider-tablet1@2x.webp 2x" width="476" height="476">
+                  <source media="(min-width: 768px)"
+                    srcset="images/catalog/slider-tablet1.png 1x, images/catalog/slider-tablet1@2x.png 2x" width="476" height="476">
 
                   <source type="image/webp"
-                    srcset="images/catalog/slider-mobile1.webp 1x, images/catalog/slider-mobile1@2x.webp 2x">
+                    srcset="images/catalog/slider-mobile1.webp 1x, images/catalog/slider-mobile1@2x.webp 2x" width="280" height="280">
                   <img class="hero__image" src="images/catalog/slider-mobile1.png"
                     srcset="images/catalog/slider-mobile1@2x.png 2x" width="280" height="280" alt="Белая банка с кофе.">
                 </picture>
@@ -109,17 +112,17 @@
               <p class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop2.webp 1x, images/catalog/slider-desktop2@2x.webp 2x">
-                  <source type="png" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop2.png 1x, images/catalog/slider-desktop2@2x.png 2x">
+                    srcset="images/catalog/slider-desktop2.webp 1x, images/catalog/slider-desktop2@2x.webp 2x" width="600" height="600">
+                  <source media="(min-width: 1440px)"
+                    srcset="images/catalog/slider-desktop2.png 1x, images/catalog/slider-desktop2@2x.png 2x" width="600" height="600">
 
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet2.webp 1x, images/catalog/slider-tablet2@2x.webp 2x">
-                  <source type="png" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet2.png 1x, images/catalog/slider-tablet2@2x.png 2x">
+                    srcset="images/catalog/slider-tablet2.webp 1x, images/catalog/slider-tablet2@2x.webp 2x" width="476" height="476">
+                  <source media="(min-width: 768px)"
+                    srcset="images/catalog/slider-tablet2.png 1x, images/catalog/slider-tablet2@2x.png 2x" width="476" height="476">
 
                   <source type="image/webp"
-                    srcset="images/catalog/slider-mobile2.webp 1x, images/catalog/slider-mobile2@2x.webp 2x">
+                    srcset="images/catalog/slider-mobile2.webp 1x, images/catalog/slider-mobile2@2x.webp 2x" width="280" height="280">
                   <img class="hero__image" src="images/catalog/slider-mobile2.png"
                     srcset="images/catalog/slider-mobile2@2x.png 2x" width="280" height="280"
                     alt="Сиреневая банка с кофе.">
@@ -148,17 +151,17 @@
               <p class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop3.webp 1x, images/catalog/slider-desktop3@2x.webp 2x">
-                  <source type="png"  media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop3.png 1x, images/catalog/slider-desktop3@2x.png 2x">
+                    srcset="images/catalog/slider-desktop3.webp 1x, images/catalog/slider-desktop3@2x.webp 2x" width="600" height="600">
+                  <source  media="(min-width: 1440px)"
+                    srcset="images/catalog/slider-desktop3.png 1x, images/catalog/slider-desktop3@2x.png 2x" width="600" height="600">
 
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet3.webp 1x, images/catalog/slider-tablet3@2x.webp 2x">
-                  <source type="png" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet3.png 1x, images/catalog/slider-tablet3@2x.png 2x">
+                    srcset="images/catalog/slider-tablet3.webp 1x, images/catalog/slider-tablet3@2x.webp 2x" width="476" height="476">
+                  <source media="(min-width: 768px)"
+                    srcset="images/catalog/slider-tablet3.png 1x, images/catalog/slider-tablet3@2x.png 2x" width="476" height="476">
 
                   <source type="image/webp"
-                    srcset="images/catalog/slider-mobile3.webp 1x, images/catalog/slider-mobile3@2x.webp 2x">
+                    srcset="images/catalog/slider-mobile3.webp 1x, images/catalog/slider-mobile3@2x.webp 2x" width="280" height="280">
                   <img class="hero__image" src="images/catalog/slider-mobile3.png"
                     srcset="images/catalog/slider-mobile3@2x.png 2x" width="280" height="280"
                     alt="Черная банка с кофе.">
@@ -235,7 +238,7 @@
           </li>
           <li class="features__item features__item--eco">
             <h3 class="features__heading heading3">Экологичность</h3>
-            <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+            <p class="features__description">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
           </li>
 
         </ul>
@@ -256,7 +259,7 @@
                 <div class="request-form__range range">
 
                   <div class="range__scale">
-                    <div class="range__bar" style="left: 0; width: 241px;">
+                    <div class="range__bar">
                       <button class="range__toggle range__toggle--min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
@@ -367,7 +370,7 @@
           </form>
           <div class="catalog__wrapper-sort sort">
             <span class="sort__title heading-filter">Сортировка:</span>
-            <select class="sort__control" name="sort">
+            <select class="sort__control" name="sort" aria-label="Сортировка">
               <option value="default">по умолчанию</option>
               <option value="new">новинки</option>
               <option value="popular">популярное</option>
@@ -528,11 +531,11 @@
     <div class="footer__wrapper">
       <div class="footer__logo-social">
         <div class="footer__logo-wrapper">
-          <a class="footer__logo logo" href="#">
-            <div class="logo__icon">
+          <a class="footer__logo " href="#">
+            <div class="footer__logo-icon">
               <picture>
-                <source type="png" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
-                <img class="logo__icon-img" src="images/logo-tablet.svg" width="82" height="36"
+                <source media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="170" height="36">
+                <img class="footer__logo-icon-img" src="images/logo-tablet.svg" width="82" height="36"
                   alt="Интернет-магазин кофейных напитков Drink2Go.">
               </picture>
             </div>

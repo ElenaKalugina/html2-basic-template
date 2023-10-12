@@ -1,6 +1,11 @@
 .contact {
   padding-top: 20px;
   padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .contact__heading {

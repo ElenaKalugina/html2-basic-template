@@ -7,6 +7,15 @@
   width: 20px;
   height: 656px;
 
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+
   &--prev::after {
     position: absolute;
     content: "";
@@ -29,6 +38,16 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  &--prev:hover,
+  &--prev:focus {
+    background: linear-gradient(to right, $base-white, transparent);
+  }
+
+  &--next:hover,
+  &--next:focus {
+    background: linear-gradient(to right, transparent, $base-white);
   }
 
   &--prev:active {

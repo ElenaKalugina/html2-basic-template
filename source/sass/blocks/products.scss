@@ -5,6 +5,13 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-container-width;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+  }
 }
 
 .products__item {

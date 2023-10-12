@@ -7,6 +7,12 @@
   background-size: 16px 16px;
   width: 16px;
   height: 16px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $base-primary;
+  }
 }
 
 .user-login {
@@ -21,3 +27,4 @@
 .user-basket__text {
   display: none;
 }
+

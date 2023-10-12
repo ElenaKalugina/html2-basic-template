@@ -1,7 +1,41 @@
+.logo {
+  display: flex;
+  padding: 12px 12px 12px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 0;
+  }
+}
+
 .logo__icon {
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
 }
 
 .logo__icon-img {
   vertical-align: top;
+  width: 32px;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.logo__name {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 132px;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
