@@ -3,7 +3,7 @@
   display: flex;
 
   @media (min-width: $tablet-width) {
-    width: 579px;
+    width: 585px;
     justify-content: space-between;
     align-items: center;
   }
@@ -46,7 +46,7 @@
 
 .nav__main-item {
   border-bottom: 1px solid $base-secondary;
-  padding: 20px;
+  padding: 20px 21px;
 
 
   @media (min-width: $tablet-width) {
@@ -84,6 +84,12 @@
   }
 }
 
+.nav__main-item:not(:last-child) {
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
 .nav__main-link {
   text-align: center;
   text-decoration: none;
@@ -112,7 +118,26 @@
   &:active {
     background-color: $base-secondary;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 44px;
+    padding-right: 20px;
+  }
 }
+
+.nav__user-item:not(:last-child) {
+  @media (min-width: $desktop-width) {
+    margin-right: 21px;
+  }
+}
+
 
 //Кнопка - бургер
 .nav__button {

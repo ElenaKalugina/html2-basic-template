@@ -9,59 +9,62 @@
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
 </head>
 
 <body class="page__body">
   <header class="header" data-test="header">
     <div class="header__wrapper">
-    <div class="header__logo-wrapper">
-      <a class="header__logo logo">
-        <div class="logo__icon">
-          <picture>
-            <source  media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
-            <source  media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
-            <img class="logo__icon-img" src="images/logo-mobile.svg" width="32" height="36"
-              alt="Интернет-магазин кофейных напитков Drink2Go.">
-          </picture>
-        </div>
-        <span class="logo__name">Интернет-магазин кофейных напитков</span>
-      </a>
+      <div class="header__logo-wrapper">
+        <a class="header__logo logo">
+          <div class="logo__icon">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+              <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+              <img class="logo__icon-img" src="images/logo-mobile.svg" width="32" height="36"
+                alt="Интернет-магазин кофейных напитков Drink2Go.">
+            </picture>
+          </div>
+          <span class="logo__name">Интернет-магазин кофейных напитков</span>
+        </a>
+      </div>
+      <nav class="header__nav nav">
+        <!-- главное меню -->
+        <ul class="nav__main-list nav__main-list--closed">
+          <li class="nav__main-item nav__main-item--current">
+            <a class="nav__main-link ">Главная</a>
+          </li>
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">Каталог</a>
+          </li>
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">Доставка</a>
+          </li>
+          <li class="nav__main-item">
+            <a class="nav__main-link" href="#">О нас</a>
+          </li>
+        </ul>
+        <!-- пользовательское меню -->
+        <ul class="nav__user-list">
+          <li class="nav__user-item">
+            <a class="nav__user-link user-login nav-link" href="#">
+              <span class="visually-hidden">Войти.</span>
+              <span class="user-login__text">Войти</span>
+            </a>
+          </li>
+          <li class="nav__user-item">
+            <a class="nav__user-link user-basket nav-link" href="#">
+              <span class="visually-hidden">Корзина.</span>
+              <span class="user-basket__text">Корзина</span>
+            </a>
+          </li>
+        </ul>
+        <!-- кнопка мобильного меню -->
+        <button class="nav__button menu-button menu-button--open js-toggle-button" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+      </nav>
     </div>
-    <nav class="header__nav nav">
-      <!-- главное меню -->
-      <ul class="nav__main-list nav__main-list--closed">
-        <li class="nav__main-item nav__main-item--current">
-          <a class="nav__main-link " >Главная</a>
-        </li>
-        <li class="nav__main-item">
-          <a class="nav__main-link" href="#">Каталог</a>
-        </li>
-        <li class="nav__main-item">
-          <a class="nav__main-link" href="#">Доставка</a>
-        </li>
-        <li class="nav__main-item">
-          <a class="nav__main-link" href="#">О нас</a>
-        </li>
-      </ul>
-      <!-- пользовательское меню -->
-      <ul class="nav__user-list">
-        <li class="nav__user-item">
-          <a class="nav__user-link user-login" href="#">
-            <span class="user-login__text">Войти</span>
-          </a>
-        </li>
-        <li class="nav__user-item">
-          <a class="nav__user-link user-basket" href="#">
-            <span class="user-basket__text">Корзина</span>
-          </a>
-        </li>
-      </ul>
-      <!-- кнопка мобильного меню -->
-      <button class="nav__button menu-button menu-button--open js-toggle-button" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
-    </nav>
-  </div>
   </header>
   <main class="main-index ">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go.</h1>
@@ -74,36 +77,42 @@
               <p class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop1.webp 1x, images/catalog/slider-desktop1@2x.webp 2x" width="600" height="600">
+                    srcset="images/catalog/slider-desktop1.webp 1x, images/catalog/slider-desktop1@2x.webp 2x"
+                    width="600" height="600">
                   <source media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop1.png 1x, images/catalog/slider-desktop1@2x.png 2x" width="600" height="600">
+                    srcset="images/catalog/slider-desktop1.png 1x, images/catalog/slider-desktop1@2x.png 2x" width="600"
+                    height="600">
 
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet1.webp 1x, images/catalog/slider-tablet1@2x.webp 2x" width="476" height="476">
+                    srcset="images/catalog/slider-tablet1.webp 1x, images/catalog/slider-tablet1@2x.webp 2x" width="476"
+                    height="476">
                   <source media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet1.png 1x, images/catalog/slider-tablet1@2x.png 2x" width="476" height="476">
+                    srcset="images/catalog/slider-tablet1.png 1x, images/catalog/slider-tablet1@2x.png 2x" width="476"
+                    height="476">
 
                   <source type="image/webp"
-                    srcset="images/catalog/slider-mobile1.webp 1x, images/catalog/slider-mobile1@2x.webp 2x" width="280" height="280">
+                    srcset="images/catalog/slider-mobile1.webp 1x, images/catalog/slider-mobile1@2x.webp 2x" width="280"
+                    height="280">
                   <img class="hero__image" src="images/catalog/slider-mobile1.png"
                     srcset="images/catalog/slider-mobile1@2x.png 2x" width="280" height="280" alt="Белая банка с кофе.">
                 </picture>
               </p>
-              <div class="hero__description-wrapper description">
-                <p class="description__badge badge">Новинка!</p>
-                <p class="description__title">Декаф Флэт Уайт</p>
-                <p class="description__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком
-                  —
-                  то,
-                  что нужно для расслабления после тяжёлого рабочего дня
-                </p>
-              </div>
-              <div class="hero__order-wrapper order-hero">
-                <div class="order-hero__cost-wrapper">
-                  <span class="order-hero__old-price">295&#8381;</span>
-                  <span class="order-hero__price price">225&#8381;</span>
+              <div class="hero__description-order-wrapper">
+                <div class="hero__description-wrapper description">
+                  <p class="description__badge badge">Новинка!</p>
+                  <p class="description__title">Декаф Флэт Уайт</p>
+                  <p class="description__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                    молоком
+                    — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня
+                  </p>
                 </div>
-                <button class="order-hero__button button" type="button">Заказать</button>
+                <div class="hero__order-wrapper order-hero">
+                  <div class="order-hero__cost-wrapper">
+                    <span class="order-hero__old-price">295&#8381;</span>
+                    <span class="order-hero__price price">225&#8381;</span>
+                  </div>
+                  <button class="order-hero__button button" type="button">Заказать</button>
+                </div>
               </div>
             </div>
           </li>
@@ -112,17 +121,22 @@
               <p class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop2.webp 1x, images/catalog/slider-desktop2@2x.webp 2x" width="600" height="600">
+                    srcset="images/catalog/slider-desktop2.webp 1x, images/catalog/slider-desktop2@2x.webp 2x"
+                    width="600" height="600">
                   <source media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop2.png 1x, images/catalog/slider-desktop2@2x.png 2x" width="600" height="600">
+                    srcset="images/catalog/slider-desktop2.png 1x, images/catalog/slider-desktop2@2x.png 2x" width="600"
+                    height="600">
 
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet2.webp 1x, images/catalog/slider-tablet2@2x.webp 2x" width="476" height="476">
+                    srcset="images/catalog/slider-tablet2.webp 1x, images/catalog/slider-tablet2@2x.webp 2x" width="476"
+                    height="476">
                   <source media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet2.png 1x, images/catalog/slider-tablet2@2x.png 2x" width="476" height="476">
+                    srcset="images/catalog/slider-tablet2.png 1x, images/catalog/slider-tablet2@2x.png 2x" width="476"
+                    height="476">
 
                   <source type="image/webp"
-                    srcset="images/catalog/slider-mobile2.webp 1x, images/catalog/slider-mobile2@2x.webp 2x" width="280" height="280">
+                    srcset="images/catalog/slider-mobile2.webp 1x, images/catalog/slider-mobile2@2x.webp 2x" width="280"
+                    height="280">
                   <img class="hero__image" src="images/catalog/slider-mobile2.png"
                     srcset="images/catalog/slider-mobile2@2x.png 2x" width="280" height="280"
                     alt="Сиреневая банка с кофе.">
@@ -151,17 +165,22 @@
               <p class="hero__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop3.webp 1x, images/catalog/slider-desktop3@2x.webp 2x" width="600" height="600">
-                  <source  media="(min-width: 1440px)"
-                    srcset="images/catalog/slider-desktop3.png 1x, images/catalog/slider-desktop3@2x.png 2x" width="600" height="600">
+                    srcset="images/catalog/slider-desktop3.webp 1x, images/catalog/slider-desktop3@2x.webp 2x"
+                    width="600" height="600">
+                  <source media="(min-width: 1440px)"
+                    srcset="images/catalog/slider-desktop3.png 1x, images/catalog/slider-desktop3@2x.png 2x" width="600"
+                    height="600">
 
                   <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet3.webp 1x, images/catalog/slider-tablet3@2x.webp 2x" width="476" height="476">
+                    srcset="images/catalog/slider-tablet3.webp 1x, images/catalog/slider-tablet3@2x.webp 2x" width="476"
+                    height="476">
                   <source media="(min-width: 768px)"
-                    srcset="images/catalog/slider-tablet3.png 1x, images/catalog/slider-tablet3@2x.png 2x" width="476" height="476">
+                    srcset="images/catalog/slider-tablet3.png 1x, images/catalog/slider-tablet3@2x.png 2x" width="476"
+                    height="476">
 
                   <source type="image/webp"
-                    srcset="images/catalog/slider-mobile3.webp 1x, images/catalog/slider-mobile3@2x.webp 2x" width="280" height="280">
+                    srcset="images/catalog/slider-mobile3.webp 1x, images/catalog/slider-mobile3@2x.webp 2x" width="280"
+                    height="280">
                   <img class="hero__image" src="images/catalog/slider-mobile3.png"
                     srcset="images/catalog/slider-mobile3@2x.png 2x" width="280" height="280"
                     alt="Черная банка с кофе.">
@@ -200,17 +219,17 @@
         </ul>
         <ol class="hero__pagination-list slider-pagination">
           <li class="hero__pagination-item">
-            <button class="slider-pagination-button slider-pagination-button--current" type="button">
+            <button class="slider-pagination__button slider-pagination__button--current" type="button">
               <span class="visually-hidden">1 товар.</span>
             </button>
           </li>
           <li class="hero__pagination-item">
-            <button class="slider-pagination-button" type="button">
+            <button class="slider-pagination__button" type="button">
               <span class="visually-hidden">2 товар.</span>
             </button>
           </li>
           <li class="hero__pagination-item">
-            <button class="slider-pagination-button" type="button">
+            <button class="slider-pagination__button" type="button">
               <span class="visually-hidden">3 товар.</span>
             </button>
           </li>
@@ -230,7 +249,7 @@
           </li>
           <li class="features__item features__item--fit">
             <h3 class="features__heading heading3">Удобство</h3>
-            <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+            <p class="features__description">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
           </li>
           <li class="features__item features__item--energy">
             <h3 class="features__heading heading3">Бодрость</h3>
@@ -251,7 +270,7 @@
           <p class="catalog__title heading2">Каталог кофейных напитков</p>
         </div>
         <div class="catalog__wrapper-form-and-products">
-          <form class="request-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog__request-form request-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="request-form__wrapper">
               <!-- range Цена-->
               <fieldset class="request-form__price">
@@ -294,21 +313,21 @@
                       <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="not-important"
                         checked>
                       <span class="milk__mark"></span>
-                      <span class="milk__text">Не важно</span>
+                      <span class="milk__text">Неважно</span>
                     </label>
                   </li>
                   <li class="milk__item">
                     <label class="milk__label">
                       <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="animal-milk">
                       <span class="milk__mark"></span>
-                      <span class="milk__text">Животное молоко</span>
+                      <span class="milk__text">Только животное</span>
                     </label>
                   </li>
                   <li class="milk__item">
                     <label class="milk__label">
                       <input class="milk__input visually-hidden" type="radio" name="need-for-milk" value="veg-milk">
                       <span class="milk__mark"></span>
-                      <span class="milk__text">Растительное молоко</span>
+                      <span class="milk__text">Только растительное</span>
                     </label>
                   </li>
                   <li class="milk__item">
@@ -391,7 +410,7 @@
                   </p>
                   <p class="products__title heading3">Декаф Флэт Уайт</p>
                 </a>
-                <p class="products__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="products__desc">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products_cost-wrapper">
                   <span class="products__cost price">225₽</span>
                   <button class="products__button button button--buy" type="button">В корзину</button>
@@ -411,7 +430,7 @@
                   </p>
                   <p class="products__title heading3">Декаф Флэт Уайт</p>
                 </a>
-                <p class="products__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="products__desc">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products_cost-wrapper">
                   <span class="products__cost price">225₽</span>
                   <button class="products__button button button--buy" type="button">В корзину</button>
@@ -431,7 +450,7 @@
                   </p>
                   <p class="products__title heading3">Декаф Флэт Уайт</p>
                 </a>
-                <p class="products__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="products__desc">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products_cost-wrapper">
                   <span class="products__cost price">225₽</span>
                   <button class="products__button button button--buy" type="button">В корзину</button>
@@ -451,7 +470,7 @@
                   </p>
                   <p class="products__title heading3">Декаф Флэт Уайт</p>
                 </a>
-                <p class="products__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="products__desc">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products_cost-wrapper">
                   <span class="products__cost price">225₽</span>
                   <button class="products__button button button--buy" type="button">В корзину</button>
@@ -471,7 +490,7 @@
                   </p>
                   <p class="products__title heading3">Декаф Флэт Уайт</p>
                 </a>
-                <p class="products__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="products__desc">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products_cost-wrapper">
                   <span class="products__cost price">225₽</span>
                   <button class="products__button button button--buy" type="button">В корзину</button>
@@ -491,7 +510,7 @@
                   </p>
                   <p class="products__title heading3">Декаф Флэт Уайт</p>
                 </a>
-                <p class="products__desc">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="products__desc">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <div class="products_cost-wrapper">
                   <span class="products__cost price">225₽</span>
                   <button class="products__button button button--buy" type="button">В корзину</button>
@@ -504,11 +523,11 @@
               <span class="pagination__button-text">Назад</span>
             </a>
             <ul class="pagination__list">
-              <li class="pagination__item pagination__item--current">
-                <a class="pagination__link ">1</a>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">1</a>
               </li>
-              <li class="pagination__item" disabled>
-                <a class="pagination__link" href="#">2</a>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link ">2</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#">3</a>
@@ -517,7 +536,6 @@
             <a class="pagination__button pagination__button--next" href="#">
               <span class="pagination__button-text">Вперед</span>
             </a>
-          </div>
           </div>
         </div>
       </div>
@@ -539,6 +557,7 @@
                   alt="Интернет-магазин кофейных напитков Drink2Go.">
               </picture>
             </div>
+            <span class="footer__logo-name">Интернет-магазин кофейных напитков</span>
           </a>
         </div>
         <section class="footer__social social">

@@ -1,30 +1,57 @@
 .user-login,
 .user-basket {
+  box-sizing: border-box;
   display: flex;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: $base-black;
-  background-size: 16px 16px;
-  width: 16px;
-  height: 16px;
+  position: relative;
+  min-width: 16px;
+  min-height: 16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $base-black;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    @media (min-width: $desktop-width) {
+      left: -24px;
+    }
+  }
+
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $base-primary;
+    &::before {
+      background-color: $base-primary;
+    }
   }
 }
 
 .user-login {
-  mask-image: url("/images/icons/stack.svg#user");
+  &::before {
+    mask-image: url("/images/icons/stack.svg#user");
+  }
 }
 
 .user-basket {
-  mask-image: url("/images/icons/stack.svg#basket");
+  &::before {
+    mask-image: url("/images/icons/stack.svg#basket");
+  }
 }
 
 .user-login__text,
 .user-basket__text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 

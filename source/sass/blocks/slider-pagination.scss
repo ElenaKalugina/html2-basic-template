@@ -1,0 +1,41 @@
+.slider-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    @include list-reset();
+    display: flex;
+  }
+}
+
+.slider-pagination__button {
+  position: relative;
+  height: 4px;
+  width: 62px;
+  background-color: inherit;
+  border: 0;
+  padding: 10px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $base-white;
+    height: 4px;
+    width: 62px;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $primary-opacity025;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $base-primary;
+    }
+  }
+}

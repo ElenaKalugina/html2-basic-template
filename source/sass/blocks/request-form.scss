@@ -4,13 +4,20 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
-  padding-bottom: 44px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     width: $tablet-container-width;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 31px;
   }
 }
 
@@ -34,6 +41,11 @@
     grid-column: 2/3;
     grid-row: 1/2;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 
 .request-form__country {
@@ -45,12 +57,22 @@
     grid-column: 3/4;
     grid-row: 1/2;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-bottom: 10px;
+  }
 }
 
 .request-form__price-title {
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .request-form__country-title,
@@ -70,8 +92,22 @@
     grid-row: 2/3;
     justify-self: center;
 
-    width: 227px;
+    width: 275px;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+
+    width: auto;
+    justify-self: start;
+  }
+}
+
+.request-form__buttons button {
+  @media (min-width: $desktop-width) {
+    width: 149px;
   }
 }

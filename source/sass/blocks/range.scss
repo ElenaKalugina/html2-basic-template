@@ -7,6 +7,7 @@
 
   @media (min-width: $tablet-width) {
     width: 223px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop-width) {
@@ -19,6 +20,7 @@
   height: 4px;
   background-color: $primary-lighter;
   left: 0;
+  width: 241px;
 
   &:has(.range__toggle:disabled) {
     background-color: $base-grey;
@@ -49,14 +51,14 @@
 
   &--max {
     top: -11px;
-    left: 229px;
+    left: 236px;
 
     @media (min-width: $tablet-width) {
-      left: 184px;
+      left: 179px;
     }
 
     @media (min-width: $desktop-width) {
-      left: 260px;
+      left: 274px;
     }
   }
 
